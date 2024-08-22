@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>팀 선택</title>
+    <link rel="stylesheet" href="/css/main.css"> <!-- CSS 파일 경로 설정 -->
+</head>
+<body>
+    <!-- <audio id="audio" src='/audio/BGM.mp3' autoplay loop></audio> 오디오 파일 경로 설정 -->
+    <div class="container">
+        <div class="team-selector">
+            <div class="team-circle">
+                <div class="team-item" data-team="BRO">
+                    <img src="/images/teams/BRO.png" alt="BRO"> <!-- 이미지 파일 경로 설정 -->
+                    <div class="team-name">Brion</div>
+                </div>
+                <div class="team-item" data-team="DK">
+                    <img src="/images/teams/DK.png" alt="DK">
+                    <div class="team-name">Dplus KIA</div>
+                </div>
+                <div class="team-item" data-team="DRX">
+                    <img src="/images/teams/DRX.png" alt="DRX">
+                    <div class="team-name">DRX</div>
+                </div>
+                <div class="team-item" data-team="FOX">
+                    <img src="/images/teams/FOX.png" alt="FOX">
+                    <div class="team-name">FearX</div>
+                </div>
+                <div class="team-item" data-team="GEN">
+                    <img src="/images/teams/GENG.png" alt="GEN">
+                    <div class="team-name">GEN.G</div>
+                </div>
+                <div class="team-item" data-team="HLE">
+                    <img src="/images/teams/HLE.png" alt="HLE">
+                    <div class="team-name">Hanwha Life</div>
+                </div>
+                <div class="team-item" data-team="KDF">
+                    <img src="/images/teams/KDF.png" alt="KDF">
+                    <div class="team-name">Kwangdong Freecs</div>
+                </div>
+                <div class="team-item" data-team="KT">
+                    <img src="/images/teams/KT.png" alt="KT">
+                    <div class="team-name">KT Rolster</div>
+                </div>
+                <div class="team-item" data-team="NS">
+                    <img src="/images/teams/NS.png" alt="NS">
+                    <div class="team-name">Nongshim RedForce</div>
+                </div>
+                <div class="team-item" data-team="T1">
+                    <img src="/images/teams/T1.png" alt="T1">
+                    <div class="team-name">SKT T1</div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <form id="match-form" action="/match" method="get"> <!-- GET 요청으로 match.html로 이동 -->
+                    <button type="submit" id="matchButton" class="btn btn-primary">Go to Match</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script> <!-- JavaScript 파일 경로 설정 -->
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 배경 이미지 설정 */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/back.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.team-selector {
+    position: relative;
+    width: 720px;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-item {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    transition: transform 0.3s, opacity 0.3s; /* 애니메이션을 위한 전환 */
+    cursor: pointer;
+    z-index: 1;
+}
+
+.team-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* 팀 아이템 위에 커서를 올리면 커지게 하기 */
+.team-item:hover {
+    transform: scale(1.2); /* 팀 아이템을 호버하면 확대 */
+}
+
+/* 선택된 팀 외의 팀 흐리게 하기 */
+.team-item.dimmed {
+    opacity: 0.5;
+}
+
+.team-name {
+    color: black;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* 액션 버튼 컨테이너 중앙에 위치시키기 */
+.action-buttons {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute;
+    top: 50%; /* 부모 요소의 세로 중앙에 위치 */
+    left: 50%; /* 부모 요소의 가로 중앙에 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+}
+
+/* Match 버튼 스타일 */
+#matchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#matchButton:hover {
+    background-color: #0056b3;
+}

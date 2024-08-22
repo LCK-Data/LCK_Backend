@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tables</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Select a Season</h1>
+    <ul>
+        <li th:each="tableName : ${tableNames}">
+            <a th:href="@{/teams(season=${tableName})}" th:text="${tableName}">Table Name</a>
+        </li>
+    </ul>
+</body>
+</html>

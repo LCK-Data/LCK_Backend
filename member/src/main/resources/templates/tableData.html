@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Table Data</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Data for Team: <span th:text="${team}"></span> in Season: <span th:text="${season}"></span></h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Season</th>
+                <th>Date</th>
+                <th>Team</th>
+                <th>Team Score</th>
+                <th>Opponent Score</th>
+                <th>Opponent Team</th>
+                <th>Champion</th>
+                <th>Opponent Champion</th>
+                <th>Player</th>
+                <th>Opponent Player</th>
+                <th>KDA</th>
+                <th>Opponent KDA</th>
+                <th>Damage</th>
+                <th>Opponent Damage</th>
+                <th>Sight</th>
+                <th>Opponent Sight</th>
+                <th>CS</th>
+                <th>Opponent CS</th>
+                <th>Per CS</th>
+                <th>Opponent Per CS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="row : ${dataList}">
+                <td th:text="${row['Season']}">Season</td>
+                <td th:text="${row['Date']}">Date</td>
+                <td th:text="${row['Team']}">Team</td>
+                <td th:text="${row['Team_Score']}">Team Score</td>
+                <td th:text="${row['Opponent_Score']}">Opponent Score</td>
+                <td th:text="${row['Opponent_Team']}">Opponent Team</td>
+                <td th:text="${row['Champion']}">Champion</td>
+                <td th:text="${row['Opponent_Champion']}">Opponent Champion</td>
+                <td th:text="${row['Player']}">Player</td>
+                <td th:text="${row['Opponet_Player']}">Opponent Player</td>
+                <td th:text="${row['KDA']}">KDA</td>
+                <td th:text="${row['Opponent_KDA']}">Opponent KDA</td>
+                <td th:text="${row['Damage']}">Damage</td>
+                <td th:text="${row['Opponent_Damage']}">Opponent Damage</td>
+                <td th:text="${row['Sight']}">Sight</td>
+                <td th:text="${row['Opponent_Sight']}">Opponent Sight</td>
+                <td th:text="${row['CS']}">CS</td>
+                <td th:text="${row['Opponent_CS']}">Opponent CS</td>
+                <td th:text="${row['Per_CS']}">Per CS</td>
+                <td th:text="${row['Opponent_Per_CS']}">Opponent Per CS</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
